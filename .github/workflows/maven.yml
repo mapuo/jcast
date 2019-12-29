@@ -39,4 +39,4 @@ jobs:
       run: |
         docker build . --file Dockerfile --tag jcast:$(date +%s)
         docker login -u="${{ secrets.DOCKER_USERNAME }}" -p="${{ secrets.DOCKER_PASSWORD }}"
-        docker push mapuo/jcast:jcast:$(date +%s)
+        docker push mapuo/jcast:$(date +%s)
