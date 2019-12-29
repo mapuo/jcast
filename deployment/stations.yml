@@ -1,0 +1,45 @@
+- name: Electronic
+  stations:
+    - name: Deep House Lounge
+      url: http://198.15.94.34:8006
+    - name: Ibiza Sonica
+      url: http://s1.sonicabroadcast.com:7005/stream
+    - name: Bassdrive
+      url: http://50.7.98.106:8200
+      icon: http://thumbnailer.mixcloud.com/unsafe/160x160/extaudio/8/5/8/a/f8e6-9555-4eb9-8005-1ec4dabd55ce.jpg
+    - name: SomaFM Fluid
+      url: http://ice1.somafm.com/fluid-128-mp3
+- name: Chillout
+  stations:
+    - name: Joint Radio
+      url: http://radio.jointil.net:9998
+    - name: SomaFM DEF CON Radio
+      url: http://ice1.somafm.com/defcon-256-mp3
+    - name: SomaFM Drone Zone
+      url: http://ice1.somafm.com/dronezone-256-mp3
+    - name: SomaFM Mission Control
+      url: http://ice1.somafm.com/missioncontrol-128-mp3
+    - name: The Jazz Groove
+      url: http://west-mp3-128.streamthejazzgroove.com
+    - name: Radionomy Downbeat
+      url: http://streaming.radionomy.com/TempoOfTheDownbeat1
+- name: Casual
+  stations:
+    - name: Radio 1
+      url: http://149.13.0.81/radio1.ogg
+    - name: Nova
+      url: http://stream.metacast.eu/nova.ogg
+    - name: 76Radio
+      url: http://192.240.102.133:9566/stream
+    - name: SomaFM Beat Blender
+      url: http://ice1.somafm.com/beatblender-128-mp3
+    - name: Jazz Radio Electro Swing
+      url: http://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3
+    - name: SomaFM Groove Salad
+      url: http://ice1.somafm.com/groovesalad-256-mp3
+    - name: SomaFM Lush
+      url: http://ice1.somafm.com/lush-128-mp3
+    - name: Allzic Radio R&B
+      url: http://allzic10.ice.infomaniak.ch/allzic10.mp3
+    - name: The UK 1940s Radio Station
+      url: http://91.121.134.23:8100/1

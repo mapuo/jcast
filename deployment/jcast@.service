@@ -1,0 +1,22 @@
+[Unit]
+Description=JCast Internet Radio
+After=syslog.target
+After=network.target
+Requires==network.target
+StartLimitIntervalSec=0
+
+[Service]
+# Service
+Environment=SERVER_PORT=%i
+Restart=always
+RestartSec=1500ms
+User=jcast
+DynamicUser=true
+ExecStart=/opt/jcast/jcast.jar
+SuccessExitStatus=143
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=jcast@%i
+
+[Install]
+WantedBy=multi-user.target
