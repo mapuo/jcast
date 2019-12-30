@@ -1,0 +1,36 @@
+name: JCast CI Dev
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+
+    - name: Cache Mvn Dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+    - name: Build with Maven
+      run: ./mvnw -B clean package --file pom.xml
+
+    - name: Build the Docker image
+      run: |
+        docker login -u="${{ secrets.DOCKER_USERNAME }}" -p="${{ secrets.DOCKER_PASSWORD }}"
+        docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/jcast:dev --tag ${{ secrets.DOCKER_USERNAME }}/jcast:${{ github.sha }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/jcast
