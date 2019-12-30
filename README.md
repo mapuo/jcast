@@ -32,8 +32,8 @@ The Volume name is `/favorites` and you should mount it if you want to have your
     If you want different file name you should set it like: `/favorites/<YOUR_FILE_NAME>`
 
 ```shell script
-docker build -t jcast .
-docker run -p 8090:80 -v ~/.local/jcast/:/favorites:ro jcast
+docker pull mapuo/jcast:latest
+docker run -p 8090:80 -v ~/.local/jcast/:/favorites:ro mapuo/jcast
 ```
 
 Skip to setting up [Nginx](#setting-up-nginx) and [PiHole](#setting-up-pihole)
