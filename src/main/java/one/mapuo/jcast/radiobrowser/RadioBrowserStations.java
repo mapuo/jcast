@@ -150,7 +150,7 @@ public class RadioBrowserStations implements StationProvider {
 
   @Override
   public Station getStation(String filter, String name, QueryParams params) {
-    if (filter.equalsIgnoreCase("id") && name != null && !name.isBlank()) {
+    if ("id".equalsIgnoreCase(filter) && name != null && !name.isBlank()) {
       StationUrl stationById = getStationById(name);
       return Station.builder()
           .uid(stationById.getStationUuid())
