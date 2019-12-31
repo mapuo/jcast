@@ -2,7 +2,7 @@
 Description=JCast Internet Radio
 After=syslog.target
 After=network.target
-Requires==network.target
+Requires=network.target
 StartLimitIntervalSec=0
 
 [Service]
